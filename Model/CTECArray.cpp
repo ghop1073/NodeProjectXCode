@@ -106,3 +106,26 @@ void CTECArray<Type>::set(int pos, const Type& value)
 		}
 
 }
+
+template <class Type>
+int CTECArray<Type>::indexOf(Type searchValue)
+{
+     assert(this->size > 0);
+        
+        ArrayNode<Type> * current= head;
+        int indexNotFound = -1;
+        
+        for(int index = 0; index< this->size; index++)
+        {
+            if(current->getValue() == searchValue)
+            {
+                return index;
+            }
+            else
+            {
+                current = current->getValue();
+            }
+        }
+        return indexNotFound;
+
+}
