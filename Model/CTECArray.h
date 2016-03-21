@@ -22,6 +22,7 @@ public:
 	Type get(int pos);
 	int getSize();
 	void set(int pos, const Type& value);
+    int nextIndexOf(int startingIndex, Type searchValue);
 };
 
 #endif /* MODEL_CTECARRAY_H_ */
