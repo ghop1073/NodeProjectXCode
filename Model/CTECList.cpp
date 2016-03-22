@@ -8,6 +8,7 @@
 #include "CTECList.h"
 #include <iostream>
 #include <assert.h>
+using namespace std;
 template <class Type>
 
 CTECList<Type>::CTECList()

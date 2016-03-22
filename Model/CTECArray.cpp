@@ -60,8 +60,6 @@ CTECArray<Type>::~CTECArray()
 	delete head;
 }
 
-
-
 template<class Type>
 Type CTECArray<Type>::get(int pos)
 {

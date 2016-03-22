@@ -281,6 +281,7 @@
 				39D3A6491C99DBB400EA8012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

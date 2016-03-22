@@ -24,6 +24,7 @@ public:
 	void addToFront(const Type& value);
 	void addToEnd(const Type& value);
 	void calculateSize();
+    void testLists();
 	Type removeFromIndex(int index);
 	Type removeFromFront();
 	Type removeFromEnd();
@@ -31,6 +32,7 @@ public:
 	Type getFront();
 	Type getFromIndex(int index);
 	Type set(int index, const Type& value);
+    
 };
 
 #endif /* MODEL_CTECLIST_H_ */
