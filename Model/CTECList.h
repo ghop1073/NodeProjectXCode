@@ -25,6 +25,8 @@ public:
 	void addToEnd(const Type& value);
 	void calculateSize();
     void testLists();
+    void swap(int indexOne, int indexTwo);
+    void selectionSort();
 	Type removeFromIndex(int index);
 	Type removeFromFront();
 	Type removeFromEnd();

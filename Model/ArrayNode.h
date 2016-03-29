@@ -23,6 +23,7 @@ public:
 	virtual ~ArrayNode();
 	ArrayNode * getNext();
 	void setNext(ArrayNode * next);
+    void swap(int indexOne, int indexTwo);
 
 };
 
