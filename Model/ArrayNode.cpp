@@ -47,11 +47,3 @@ void ArrayNode<Type> :: setNext(ArrayNode<Type> * next)
 	this->next = next;
 }
 
-template <class Type>
-void ArrayNode<Type> :: swap(int indexOne, int indexTwo)
-{
-    assert(indexOne < size && indexTwo < size);
-    Type temp = get(indexOne);
-    set(indexOne, get(indexTwo));
-    set(indexTwo, temp);
-}
