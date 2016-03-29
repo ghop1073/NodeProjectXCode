@@ -50,3 +50,8 @@ void NodeController :: start()
 	codeTimer.stopTimer();
 	codeTimer.displayTimerInfo();
 }
+
+void NodeController::sortData()
+{
+    
+}

@@ -29,6 +29,7 @@ private:
 	CTECArray<int> * notHipsterInts;
 	Timer codeTimer;
 	CTECList<int> * numbers;
+    void sortData();
 
 public:
 	virtual ~NodeController();
