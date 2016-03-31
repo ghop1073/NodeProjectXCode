@@ -30,12 +30,6 @@ private:
 	Timer codeTimer;
 	CTECList<int> * numbers;
     void sortData();
-
-public:
-	virtual ~NodeController();
-	NodeController();
-	void start();
-    void testList();
     int * mergeData;
     void doMergesort();
     void mergesort(int data[], int size);
@@ -44,6 +38,13 @@ public:
     int partition(int first, int last);
     void doQuick();
     void swap(int first, int second);
+
+public:
+	virtual ~NodeController();
+	NodeController();
+	void start();
+    void testList();
+ 
 };
 
 

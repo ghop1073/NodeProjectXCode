@@ -81,3 +81,30 @@ void NodeController::sortData()
     
     sortTimer.resetTimer();
 }
+
+void NodeController::doMergesort()
+{
+    mergeData = new int[500000];
+    for(int spot = 0; spot < 500000; spot++)
+    {
+        int myRandom = rand();
+        mergeData[spot] = myRandom;
+    }
+    for(int spot = 0; spot < 5000; spot++)
+    {
+        cout << mergeData[spot] << ",";
+    }
+    
+    Timer mergeTimer;
+    mergeTimer.startTimer();
+    mergesort(mergeData, 5000000);
+    mergeTimer.stopTimer();
+    mergeTimer.displayTimerInfo();
+    
+    for(int spot = 0; spot < 5000; spot++)
+    {
+        cout << mergeData[spot] << ",";
+    }
+    
+    delete [] mergeData;
+}
