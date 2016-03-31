@@ -35,8 +35,10 @@ void NodeController :: testList()
 void NodeController :: start()
 {
     testList();
+    doMergesort();
 	codeTimer.startTimer();
 
+    
 
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 	{
@@ -84,10 +86,10 @@ void NodeController::sortData()
 
 void NodeController::doMergesort()
 {
-    mergeData = new int[500000];
-    for(int spot = 0; spot < 500000; spot++)
+    mergeData = new int[500000000];
+    for(int spot = 0; spot < 500000000; spot++)
     {
-        int myRandom = rand();
+        int myRandom = rand() % 1000;
         mergeData[spot] = myRandom;
     }
     for(int spot = 0; spot < 5000; spot++)
@@ -97,7 +99,7 @@ void NodeController::doMergesort()
     
     Timer mergeTimer;
     mergeTimer.startTimer();
-    mergesort(mergeData, 5000000);
+    mergesort(mergeData, 5000);
     mergeTimer.stopTimer();
     mergeTimer.displayTimerInfo();
     
@@ -164,4 +166,39 @@ void NodeController::merge(int data[], int sizeOne, int sizeTwo)
     }
     
     delete [] temp;
+}
+
+void NodeController::quicksort(int first, int last)
+{
+    int pivotIndex;
+    
+    if(first < last)
+    {
+        pivotIndex = partition(first, last);
+        quicksort(first, pivotIndex-1);
+        quicksort(pivotIndex,last);
+    }
+}
+
+int NodeController::partition(int first, int last)
+{
+    int pivot;
+    
+    int index, smallIndex;
+    swap(first, (first + last)/2);
+    
+    pivot = mergeData[first];
+    smallIndex = first;
+    
+    for(index = first + 1; index <= last; index++)
+    {
+        if(mergeData[index] < pivot)
+        {
+            smallIndex++;
+            swap(smallIndex,index);
+        }
+    }
+    swap(first, smallIndex);
+    
+    return smallIndex;
 }
