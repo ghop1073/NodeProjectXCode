@@ -35,7 +35,7 @@ void NodeController :: testList()
 void NodeController :: start()
 {
  
-    doQuick();
+    testList();
 }
 
 void NodeController::sortData()
