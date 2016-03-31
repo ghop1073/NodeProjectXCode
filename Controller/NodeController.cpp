@@ -202,3 +202,21 @@ int NodeController::partition(int first, int last)
     
     return smallIndex;
 }
+
+void NodeController::doQuick()
+{
+    mergeData = new int[1000000000];
+    
+    for(int spot = 0; spot < 1000000000; spot++)
+    {
+        int myRandom = rand();
+        mergeData[spot] = myRandom;
+    }
+    Timer mergeTimer;
+    mergeTimer.startTimer();
+    quicksort(0,1000000000-1);
+    mergeTimer.stopTimer();
+    mergeTimer.displayTimerInfo();
+    
+    delete [] mergeData;
+}
