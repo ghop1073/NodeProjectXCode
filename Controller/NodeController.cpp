@@ -108,3 +108,20 @@ void NodeController::doMergesort()
     
     delete [] mergeData;
 }
+
+void NodeController::mergesort(int data[], int size)
+{
+    int sizeOne;
+    int sizeTwo;
+    
+    if(size > 1)
+    {
+        sizeOne = size/2;
+        sizeTwo = size-sizeOne;
+        
+        mergesort(data, sizeOne);
+        mergesort((data+sizeOne), sizeTwo);
+        
+        merge(data,sizeOne,sizeTwo);
+    }
+}
