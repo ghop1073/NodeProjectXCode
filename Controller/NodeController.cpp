@@ -160,7 +160,7 @@ void NodeController::quicksort(int first, int last)
     {
         pivotIndex = partition(first, last);
         quicksort(first, pivotIndex-1);
-        quicksort(pivotIndex,last);
+        quicksort(pivotIndex+1,last);
     }
 }
 
