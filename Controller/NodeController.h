@@ -36,6 +36,14 @@ public:
 	NodeController();
 	void start();
     void testList();
+    int * mergeData;
+    void doMergesort();
+    void mergesort(int data[], int size);
+    void merge(int data [], int sizeOne, int sizeTwo);
+    void quicksort(int first, int last);
+    int partition(int first, int last);
+    void doQuick();
+    void swap(int first, int second);
 };
 
 

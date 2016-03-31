@@ -76,16 +76,28 @@ template<class Type>
 void CTECList<Type>:: addToEnd(const Type& value)
 {
 
-	assert(size > 0);
+	assert(size >= 0);
 
-		ArrayNode<Type> * newEnd = new ArrayNode<Type>(value);
-		ArrayNode<Type> * currentSpot = end;
-		ArrayNode<Type> * newNext = newEnd;
+    ArrayNode<Type> * newEnd = new ArrayNode<Type>(value);
+		
+    if(size == 0)
+    {
+        head = newEnd;
+    
+    }
+    else if(size == 1)
+    {
+        head->setNext(newEnd);
+    }
+    else
+    {
+        end->setNext(newEnd);
+      
+    }
+      end = newEnd;
 
-		currentSpot->setNext(newNext);
-		newNext->setNext(nullptr);
-
-
+		
+		
 		calculateSize();
 }
 
