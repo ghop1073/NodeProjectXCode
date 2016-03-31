@@ -204,3 +204,10 @@ void NodeController::doQuick()
     
     delete [] mergeData;
 }
+
+void NodeController::swap(int first, int last)
+{
+    int temp = mergeData[first];
+    mergeData[first] = mergeData[last];
+    mergeData[last] = temp;
+}
