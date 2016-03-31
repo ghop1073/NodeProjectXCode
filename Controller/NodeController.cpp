@@ -34,24 +34,8 @@ void NodeController :: testList()
 
 void NodeController :: start()
 {
-    testList();
-    doMergesort();
-	codeTimer.startTimer();
-
-    
-
-	for(int index = 0; index < notHipsterInts->getSize(); index++)
-	{
-		notHipsterInts->set(index, (index * 7));
-	}
-
-	for(int index = notHipsterInts -> getSize() -  1; index >=0; index --)
-	{
-		cout << "the contents of not hipster ints array node " << index << " are " << notHipsterInts->get(index) << endl;
-	}
-
-	codeTimer.stopTimer();
-	codeTimer.displayTimerInfo();
+ 
+    doQuick();
 }
 
 void NodeController::sortData()
