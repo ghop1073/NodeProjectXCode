@@ -7,44 +7,46 @@
 
 #ifndef CONTROLLER_NODECONTROLLER_H_
 #define CONTROLLER_NODECONTROLLER_H_
-#include "../Model/Node.h"
-#include "../Model/Node.cpp"
-#include "../Model/CTECArray.h"
-#include "../Model/CTECArray.cpp"
 
+#include "../Model/Node.cpp"
+#include "../Model/ArrayNode.cpp"
+#include "../Model/CTECArray.cpp"
 #include "../Model/Timer.h"
-#include "../Model/CTECList.cpp"
-#include "../Model/CTECList.h"
+#include "../model/CTECList.cpp"
+#include "../model/CTECGraph.cpp"
+#include "../model/CTECBinaryTree.cpp"
+
 
 #include <string>
-
-#include "../Model/ArrayNode.cpp"
-#include "../Model/ArrayNode.h"
 using namespace std;
 
 class NodeController
 {
 private:
-
-	CTECArray<int> * notHipsterInts;
-	Timer codeTimer;
-	CTECList<int> * numbers;
+    Timer arrayTimer;
+    CTECArray<int> * notHipsterInts;
+    CTECList<int> * numbers;
     void sortData();
+    
     int * mergeData;
     void doMergesort();
     void mergesort(int data[], int size);
     void merge(int data [], int sizeOne, int sizeTwo);
+    
+    
+    void swap(int first, int seconed);
     void quicksort(int first, int last);
     int partition(int first, int last);
     void doQuick();
-    void swap(int first, int second);
-
+    
+    void tryGraphs();
+    void tryTrees();
+    
 public:
-	virtual ~NodeController();
-	NodeController();
-	void start();
     void testList();
- 
+    virtual ~NodeController();
+    NodeController();
+    void start();
 };
 
 
