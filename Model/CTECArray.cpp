@@ -185,3 +185,5 @@ void CTECArray<Type> :: swap(int indexOne, int indexTwo)
     set(indexOne, get(indexTwo));
     set(indexTwo, temp);
 }
+
+

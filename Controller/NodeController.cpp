@@ -44,8 +44,8 @@ void NodeController :: testList()
     numbers->removeFromFront();
     cout << "the beginning should be 188 and is" << numbers->getFront() << endl;
     
-    cout << "the size of the list should be 2 and is" << numbers->getSize();
-    cout << "the index of 19 should be 1 and is" << numbers->indexOf(2);
+    cout << "the size of the list should be 2 and is" << numbers->calculateSize();
+    cout << "the index of 19 should be 1 and is" << numbers->getFromIndex(<#int index#>)(2);
     
     
     
@@ -59,22 +59,22 @@ void NodeController :: testList()
 void NodeController :: start()
 {
     tryTrees();
-    //    doMergesort();
+        doMergesort();
     
-    //	arrayTimer.startTimer();
-    //
-    //	for(int index = 0; index < notHipsterInts->getSize(); index++)
-    //	{
-    //		notHipsterInts->set(index, (index *23));
-    //	}
-    //
-    //	for(int index = notHipsterInts -> getSize() -  1; index >=0; index --)
-    //	{
-    //		cout << "tuh contents of not hipster ints array node " << index << " are " << notHipsterInts->get(index) << endl;
-    //	}
-    //
-    //	arrayTimer.stopTimer();
-    //	arrayTimer.displayTimerInfo();
+    	arrayTimer.startTimer();
+    
+    	for(int index = 0; index < notHipsterInts->getSize(); index++)
+    	{
+    		notHipsterInts->set(index, (index *23));
+    	}
+    
+    	for(int index = notHipsterInts -> getSize() -  1; index >=0; index --)
+    	{
+    		cout << "tuh contents of not hipster ints array node " << index << " are " << notHipsterInts->get(index) << endl;
+    	}
+    
+    	arrayTimer.stopTimer();
+    	arrayTimer.displayTimerInfo();
     
 }
 
@@ -262,8 +262,8 @@ void NodeController::doQuick()
 
 void NodeController::tryGraphs()
 {
-    //    CTECGraph<int> testGraph;
-    //    testGraph.addVertex(4);
+        CTECGraph<int> testGraph;
+        testGraph.addVertex(4);
 }
 
 void NodeController::tryTrees()
