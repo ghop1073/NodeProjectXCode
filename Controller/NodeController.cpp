@@ -22,43 +22,43 @@ NodeController :: ~NodeController()
     //auto-generated destructor
 }
 
-void NodeController :: testList()
-{
-    
-    
-    numbers->addToFront(3);
-    numbers->addToEnd(8);
-    numbers->addAtIndex(1,188);
-    
-    cout << "End should be 8 and is " << numbers->getEnd() << endl;
-    cout << "Front should be 3 and is " << numbers->getFront() << endl;
-    cout << "the middle should be 188 and is" << numbers->getFromIndex(2);
-    
-    numbers->addToEnd(19);
-    numbers->addToEnd(20);
-    
-    numbers->removeFromEnd();
-    cout << "the end should be 19 and is " << numbers->getEnd() << endl;
-    numbers->removeFromIndex(2);
-    cout << "the index 1 should be 188 and is" << numbers->getFromIndex(1) << endl;
-    numbers->removeFromFront();
-    cout << "the beginning should be 188 and is" << numbers->getFront() << endl;
-    
-    cout << "the size of the list should be 2 and is" << numbers->calculateSize();
-    cout << "the index of 19 should be 1 and is" << numbers->getFromIndex(<#int index#>)(2);
-    
-    
-    
-    
-    
-    
-}
+//void NodeController :: testList()
+//{
+//    
+//    
+//    numbers->addToFront(3);
+//    numbers->addToEnd(8);
+//    numbers->addAtIndex(1,188);
+//    
+//    cout << "End should be 8 and is " << numbers->getEnd() << endl;
+//    cout << "Front should be 3 and is " << numbers->getFront() << endl;
+//    cout << "the middle should be 188 and is" << numbers->getFromIndex(2);
+//    
+//    numbers->addToEnd(19);
+//    numbers->addToEnd(20);
+//    
+//    numbers->removeFromEnd();
+//    cout << "the end should be 19 and is " << numbers->getEnd() << endl;
+//    numbers->removeFromIndex(2);
+//    cout << "the index 1 should be 188 and is" << numbers->getFromIndex(1) << endl;
+//    numbers->removeFromFront();
+//    cout << "the beginning should be 188 and is" << numbers->getFront() << endl;
+//    
+//    cout << "the size of the list should be 2 and is" << numbers->calculateSize();
+//    cout << "the index of 19 should be 1 and is" << numbers->getFromIndex(<#int index#>)(2);
+//    
+//    
+//    
+//    
+//    
+//    
+//}
 
 
 
 void NodeController :: start()
 {
-    tryTrees();
+//    tryTrees();
         doMergesort();
     
     	arrayTimer.startTimer();
@@ -260,31 +260,31 @@ void NodeController::doQuick()
 
 
 
-void NodeController::tryGraphs()
-{
-        CTECGraph<int> testGraph;
-        testGraph.addVertex(4);
-}
-
-void NodeController::tryTrees()
-{
-    
-    CTECBinaryTree<int> testTree;
-    testTree.insert(1);
-    testTree.insert(5);
-    testTree.insert(7);
-    testTree.insert(3);
-    testTree.insert(2);
-    testTree.insert(8);
-    testTree.insert(12);
-    
-    testTree.getSize();
-    testTree.postorderTraversal(testTree.getRoot());
-    
-    
-    
-    
-}
+//void NodeController::tryGraphs()
+//{
+//        CTECGraph<int> testGraph;
+//        testGraph.addVertex(4);
+//}
+//
+//void NodeController::tryTrees()
+//{
+//    
+//    CTECBinaryTree<int> testTree;
+//    testTree.insert(1);
+//    testTree.insert(5);
+//    testTree.insert(7);
+//    testTree.insert(3);
+//    testTree.insert(2);
+//    testTree.insert(8);
+//    testTree.insert(12);
+//    
+//    testTree.getSize();
+//    testTree.postorderTraversal(testTree.getRoot());
+//    
+//    
+//    
+//    
+//}
 
 
 

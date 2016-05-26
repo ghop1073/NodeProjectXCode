@@ -227,7 +227,7 @@ TreeNode<Type> * CTECBinaryTree<Type>:: getLeftMostChild(TreeNode<Type> * rightS
 
 
 template<class Type>
-Type CTECBinaryTree<Type> :: remove(const Type& value)
+void CTECBinaryTree<Type> :: remove(const Type& value)
 {
     TreeNode<Type> * current;
     TreeNode<Type> * trailing;
